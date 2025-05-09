@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FNaF Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FNaF Website | Home</title>
   <link href="https://fonts.cdnfonts.com/css/scream-again" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/hacked" rel="stylesheet">
   <style>
@@ -13,7 +14,7 @@
     }
 
     .announcement-banner {
-      background-color: #8B0000; /* Dark red */
+      background-color: #8B0000;
       background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngarts.com%2Ffiles%2F12%2FBlood-Drip-Stain-Transparent-Image.png&f=1&nofb=1&ipt=41c1abdb65745e80cdac5a3a752a30879984ad852152e5dbc5fc4f79ada6a729');
       background-repeat: repeat;
       background-position: center;
@@ -41,6 +42,11 @@
       max-width: 260px;
       height: auto;
       filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
+      transition: transform 0.2s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
     }
 
     .menu-icon, .search-icon, .login-icon, .cart-icon {
@@ -51,25 +57,25 @@
       color: white;
       font-family: Impact, sans-serif;
       font-size: 10pt;
+      transition: transform 0.2s ease;
     }
 
-    .menu-icon {
-      left: 40px;
+    .menu-icon:hover,
+    .search-icon:hover,
+    .login-icon:hover,
+    .cart-icon:hover {
+      transform: scale(1.05) translateY(-50%);
     }
 
-    .search-icon {
-      left: 100px;
-    }
+    .menu-icon { left: 40px; }
+    .search-icon { left: 100px; }
+    .login-icon { right: 100px; }
+    .cart-icon { right: 40px; }
 
-    .login-icon {
-      right: 100px;
-    }
-
-    .cart-icon {
-      right: 40px;
-    }
-
-    .menu-icon img, .search-icon img, .login-icon img, .cart-icon img {
+    .menu-icon img,
+    .search-icon img,
+    .login-icon img,
+    .cart-icon img {
       width: 34px;
       height: 34px;
       display: block;
@@ -77,7 +83,7 @@
     }
 
     .nav-bar {
-      background-color: #1a1a1a; /* Slightly lighter black */
+      background-color: #1a1a1a;
       text-align: center;
       padding: 10px 0;
     }
@@ -87,20 +93,11 @@
       color: white;
       margin: 0 20px;
       font-size: 14pt;
-    }
-      .logo:hover {
       transition: transform 0.2s ease;
-      transform: scale(1.05);
     }
 
-    .menu-icon:hover,
-    .search-icon:hover,
-    .login-icon:hover,
-    .cart-icon:hover,
     .nav-bar span:hover {
-      transition: transform 0.2s ease;
-      transform: scale(1.05) translateY(-50%);
-    }
+      transform: scale(1.05);
     }
   </style>
 </head>
