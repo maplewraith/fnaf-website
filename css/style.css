@@ -32,13 +32,19 @@ body {
               url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F40%2F0b%2F8e%2F400b8e55f9abaa1c7f22c4b079fff5f1.jpg&f=1&nofb=1&ipt=1f750845aba381528db5a63938bf851e5452e0a59be127850eb19549b825560f');
   background-size: 110%;
   background-position: center;
+  transition: padding 0.3s ease;
+}
+
+.site-header.shrink {
+  padding: 15px 0;
 }
 
 .site-header img.logo {
-  max-width: 260px;
-  height: auto;
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.6));
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, max-width 0.3s ease;
+}
+
+.site-header.shrink img.logo {
+  max-width: 180px;
 }
 
 .logo:hover {
